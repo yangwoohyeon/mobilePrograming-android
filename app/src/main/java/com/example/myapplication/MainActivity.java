@@ -33,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);//activity_main을 이 액티비티의 화면으로 설정
 
 
         api = RetrofitClient.getRetrofit().create(ApiInterface.class);
-        editText = (EditText) findViewById(R.id.editTextText);
-        btn = (Button) findViewById(R.id.button);
+
+        editText = (EditText) findViewById(R.id.editTextText); // activity_main의 editTextText를 editText로 설정
+        btn = (Button) findViewById(R.id.button); // activity_main의 button을 btn으로 설정
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
