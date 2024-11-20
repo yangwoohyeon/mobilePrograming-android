@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Data data = new Data(); // 중요
                 data.setText(editText.getText().toString()); //중요
-                api.postData(data).enqueue(new Callback<Data>() { //중요
+                api.postData(data).enqueue(new Callback<Data>(){ //중요
                     @Override
                     public void onResponse(Call<Data> call, Response<Data> response) {
                         if(response.isSuccessful()){
