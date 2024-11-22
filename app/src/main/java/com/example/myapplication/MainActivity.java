@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Data data = new Data(); // 중요
-                data.setText(editText.getText().toString()); //중요
-                api.postData(data).enqueue(new Callback<Data>(){ //중요
+                Data data = new Data();
+                data.setText(editText.getText().toString());
+                api.postData(data).enqueue(new Callback<Data>() {
                     @Override
                     public void onResponse(Call<Data> call, Response<Data> response) {
                         if(response.isSuccessful()){
