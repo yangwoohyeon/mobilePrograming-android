@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);//activity_main을 이 액티비티의 화면으로 설정
 
 
-        api = RetrofitClient.getRetrofit().create(ApiInterface.class);
+        api = RetrofitClient.getRetrofit().create(ApiInterface.class); //중요
 
         editText = (EditText) findViewById(R.id.editTextText); // activity_main의 editTextText를 editText로 설정
         btn = (Button) findViewById(R.id.button); // activity_main의 button을 btn으로 설정
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 data.setText(editText.getText().toString());
                 api.postData(data).enqueue(new Callback<Data>() {
                     @Override
-                    public void onResponse(Call<Data> call, Response<Data> response) {
+                    public void onResponse(Call<Data> call, Response<Data> response){
                         if(response.isSuccessful()){
                             txt.setText(response.body().getResult());
                         }
