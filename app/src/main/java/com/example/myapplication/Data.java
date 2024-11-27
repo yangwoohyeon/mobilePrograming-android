@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class Data {
    @Expose
-   @SerializedName("text") private String text;
-   @SerializedName("result") private String result;
+   @SerializedName("text") private String text; //
+   @SerializedName("result") private String result; //서버 응답 텍스트
 
     public String getText() {
         return text;
