@@ -1,5 +1,8 @@
 package com.example.myapplication;
 
+import static android.content.Intent.getIntent;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +23,10 @@ public class FirstFragment extends Fragment {
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
+        Intent intent = null;
+        intent=getIntent();
+
+        String str = intent.getStringExtra("test");
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
